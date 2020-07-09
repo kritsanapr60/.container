@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "incubate-internship-2020": {
+      "hosting": {
+        "googleSingIn1": [
+          "incubate-internship-2020"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "incubate-internship-2020"
+  }
+}

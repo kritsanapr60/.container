@@ -1,0 +1,24 @@
+<p>login-admin works!</p>
+<div fxLayout="column" fxLayoutAlign="space-between center">
+  <h1>Admin Login</h1>
+  <br>
+  <div *ngIf="auth.user$ | async as user ; else login">
+      <!-- <pre>
+      {{ user | json }}
+    </pre> -->
+
+    <div>คุณไม่มีสิทธิ์</div>
+      <hr>
+      <button mat-button class="button" (click)="auth.signOut()">Sign Out</button>
+    </div>
+
+
+  </div>
+
+  <ng-template #login>
+    <button mat-button style="padding: 1rem;" (click)="auth.googleSignin()">
+      <mat-icon style="width: 50px; height:30px" svgIcon="logo"></mat-icon> Login With Google
+    </button>
+  </ng-template>
+
+<router-outlet></router-outlet>
